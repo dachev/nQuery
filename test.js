@@ -2,7 +2,7 @@
 
 require.paths.push(__dirname);
 require.paths.push(__dirname + '/lib');
-require.paths.push(__dirname + '/deps/nodeunit');
+require.paths.push(__dirname + '/test/nodeunit');
 
 try {
     var testrunner = require('nodeunit').testrunner;
