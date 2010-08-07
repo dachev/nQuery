@@ -8,11 +8,11 @@ A [node.js](http://github.com/ry/node) plugin that brings [sizzle](http://github
 
 ## How to test
 To run the tests, go to the project's root directory and run
-   node test.js
+    node test.js
 
 ## Demo
 To run the tests, go to the `example` directory and run
-   node web.js
+    node web.js
 
 ## How to use
     var http     = require('http'),
