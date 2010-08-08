@@ -1,0 +1,32 @@
+{
+    "name" : "node-sizzle",
+    "version" : "0.1.0",
+    "author" : "Blagovest Dachev - http://github.com/dachev",
+    "description" : "Sizzle powered selectors for libxmljs",
+    "keywords": [
+        "dom",
+        "sizzle",
+        "jquery",
+        "html",
+        "xml"
+    ],
+    "bugs": {
+        "mail": "blago@dachev.com",
+        "web": "http://github.com/dachev/node-sizzle/issues"
+    },
+    "scripts" : {"test" : "make test"},
+    "engines" : { "node" : ">=0.1.102" },
+    "licenses": [
+        {
+            "type": "GPL",
+            "url": "http://github.com/dachev/node-sizzle/blob/master/LICENSE.txt"
+        }
+    ],
+    "dependencies": {
+       "libxmljs": ">=0.4.0"
+    },
+    "directories": {
+        "lib": "./lib"
+    },
+    "main" : "./lib/node-sizzle"
+}

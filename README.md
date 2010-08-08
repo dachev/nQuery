@@ -6,6 +6,9 @@ A [node.js](http://github.com/ry/node) plugin that brings [sizzle](http://github
 - Node v0.1.102+
 - libxmljs v0.4.0+
 
+## How to install
+    npm install node-sizzle
+
 ## How to test
 To run the tests, go to the project's root directory and run
     node test.js
@@ -16,17 +19,18 @@ To run the tests, go to the `examples` directory and run
 
 ## How to use
     var http     = require('http'),
-        fs       = require('fs'),
+        events   = require('events'),
         inherits = require('sys').inherits,
-        dominiq  = require('../lib/dominiq'),
-        sizzFact = require('../lib/sizzle');
-
+        dominiq  = require('node-sizzle/dominiq'),
+        sizzFact = require('node-sizzle');
+    
     function WebClient(host, path) {
         var self       = this,
             transport  = http.createClient(80, host),
             request    = transport.request('GET', path, {'host': host});
-        
+            
         request.end();
+        
         request.on('response', function (response) {
             if (response.statusCode != 200) {
                 self.emit('done', response.statusCode, '');
@@ -45,7 +49,7 @@ To run the tests, go to the `examples` directory and run
         });
     }
     inherits(WebClient, events.EventEmitter);
-
+    
     var client = new WebClient('www.yahoo.com', '/');
     client.on('done', function(status, html) {
         if (status != 200) {
@@ -58,6 +62,7 @@ To run the tests, go to the `examples` directory and run
             divs     = sizzle('div');
     
         for (var i = 0; i < divs.length; i++) {
-            console.log(divs[i]);
+            console.log(divs[i].toString());
         }
     });
+    

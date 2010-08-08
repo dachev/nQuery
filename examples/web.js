@@ -5,7 +5,7 @@ var http     = require('http'),
     events   = require('events'),
     inherits = require('sys').inherits,
     dominiq  = require('../lib/dominiq'),
-    sizzFact = require('../lib/sizzle');
+    sizzFact = require('../lib/node-sizzle');
 
 function WebClient(host, path) {
     var self       = this,
@@ -61,7 +61,7 @@ client.on('done', function(status, html) {
         divs     = sizzle('div');
     
     for (var i = 0; i < divs.length; i++) {
-        console.log(divs[i]);
+        console.log(divs[i].toString());
     }
 });
  
