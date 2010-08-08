@@ -4,7 +4,7 @@ var nodeunit = require('nodeunit'),
     fs       = require('fs'),
     sys      = require('sys'),
     dominiq  = require('../lib/dominiq'),
-    sizzFact = require('../lib/sizzle'),
+    sizzFact = require('../lib/node-sizzle'),
     jqFact   = require('./fixtures/jqresque');
 
 var html     = fs.readFileSync('./fixtures/index.html', 'utf8'),
