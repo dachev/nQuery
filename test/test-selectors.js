@@ -18,7 +18,7 @@ $.expr      = sizzle.selectors;
 $.expr[":"] = $.expr.filters;
 $.unique    = sizzle.uniqueSort;
 
-    
+
 exports.testElement = function(test) {
     test.expect(19);
     
