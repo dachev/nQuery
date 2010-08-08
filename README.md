@@ -14,7 +14,7 @@ To run the tests, go to the project's root directory and run
     node test.js
 
 ## Demo
-To run the tests, go to the `examples` directory and run
+To run the demo, go to the `examples` directory and run
     node web.js
 
 ## How to use
