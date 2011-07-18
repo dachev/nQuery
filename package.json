@@ -2,7 +2,7 @@
     "name" : "nquery",
     "description" : "Sizzle powered selectors for libxmljs",
     "keywords": ["dom", "sizzle", "jquery", "html", "xml", "selector", "query"],
-    "version" : "0.1.0",
+    "version" : "0.1.1",
     "main" : "./lib/nquery",
     "dependencies": {"libxmljs": ">=0.4.0"},
     "engines" : { "node" : ">=0.1.102" },

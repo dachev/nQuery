@@ -37,11 +37,11 @@ client.on('done', function(status, html) {
         throw 'unable to download page';
     }
 
-    var doc  = nquery.createHtmlDocument(html);
-    var divs = doc('div');
+    var $      = nquery.createHtmlDocument(html);
+    var $links = $('div').find('a');
 
-    for (var i = 0; i < divs.length; i++) {
-        console.log(divs[i].toString());
+    for (var i = 0; i < $links.length; i++) {
+        console.log($links[i].toString());
     }
 });
 

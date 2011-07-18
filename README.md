@@ -14,7 +14,7 @@ A [node.js](http://github.com/ry/node) plugin that brings [sizzle](http://github
 To run the tests, go to the project's root directory and run
 
 ``` bash
-node test.js
+make test
 ```
 
 ## Demo
@@ -29,10 +29,10 @@ node web.js
 ``` javascript
 var nquery = require('nquery');
 var html   = '<html><head></head><body><div id="test" class="test">google</div></body></html>';
-var doc    = nquery.createHtmlDocument(html);
-var divs   = doc('div.test');
+var $      = nquery.createHtmlDocument(html);
+var $divs  = $('div.test');
 
-for (var i = 0; i < divs.length; i++) {
-    console.log(divs[i].toString());
+for (var i = 0; i < $divs.length; i++) {
+    console.log($divs[i].toString());
 }
 ```

@@ -1,23 +1,12 @@
 process.chdir(__dirname);
 
-var nodeunit = require('nodeunit'),
-    fs       = require('fs'),
-    sys      = require('sys'),
-    dominiq  = require('../lib/dominiq'),
-    sizzFact = require('../lib/node-sizzle'),
-    jqFact   = require('./fixtures/jqresque');
-
-var html     = fs.readFileSync('./fixtures/index.html', 'utf8'),
-    doc      = dominiq.createHTMLDocument(html),
-    window   = {document:doc},
-    sizzle   = sizzFact.sizzleInit(window),
-    $        = jqFact.jQueryInit(window);
-
-$.find      = sizzle;
-$.expr      = sizzle.selectors;
-$.expr[":"] = $.expr.filters;
-$.unique    = sizzle.uniqueSort;
-
+var nodeunit = require('nodeunit');
+var fs       = require('fs');
+var sys      = require('sys');
+var nquery   = require('../lib/nquery');
+var html     = fs.readFileSync('./fixtures/index.html', 'utf8');
+var $        = nquery.createHtmlDocument(html);
+var doc      = $.window.document;
 
 exports.testElement = function(test) {
     test.expect(19);
