@@ -14,7 +14,7 @@ A [node.js](http://github.com/ry/node) plugin that brings [sizzle](http://github
 To run the tests, go to the project's root directory and run
 
 ``` bash
-    node test.js
+node test.js
 ```
 
 ## Demo
