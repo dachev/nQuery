@@ -7,13 +7,16 @@ A [node.js](http://github.com/ry/node) plugin that brings [sizzle](http://github
 - libxmljs v0.4.0+
 
 ## How to install
+
     npm install nquery
 
 ## How to test
+
 To run the tests, go to the project's root directory and run
     node test.js
 
 ## Demo
+
 To run the demo, go to the `examples` directory and run
     node web.js
 
