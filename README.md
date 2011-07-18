@@ -11,14 +11,16 @@ A [node.js](http://github.com/ry/node) plugin that brings [sizzle](http://github
     npm install nquery
 
 ## How to test
-
 To run the tests, go to the project's root directory and run
+``` bash
     node test.js
+```
 
 ## Demo
-
 To run the demo, go to the `examples` directory and run
+``` bash
     node web.js
+```
 
 ## How to use
 
