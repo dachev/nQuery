@@ -27,11 +27,10 @@ node web.js
 ## How to use
 
 ``` javascript
-var nquery   = require('nquery');
-
-var html = '<html><head></head><body><div id="test" class="test">google</div></body></html>';
-var doc  = nquery.createHtmlDocument(html);
-var divs = doc('div.test');
+var nquery = require('nquery');
+var html   = '<html><head></head><body><div id="test" class="test">google</div></body></html>';
+var doc    = nquery.createHtmlDocument(html);
+var divs   = doc('div.test');
 
 for (var i = 0; i < divs.length; i++) {
     console.log(divs[i].toString());
