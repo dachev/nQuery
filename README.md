@@ -19,8 +19,9 @@ node test.js
 
 ## Demo
 To run the demo, go to the `examples` directory and run
+
 ``` bash
-    node web.js
+node web.js
 ```
 
 ## How to use
