@@ -1,4 +1,4 @@
-node-sizzle
+nQuery
 =====================================
 A [node.js](http://github.com/ry/node) plugin that brings [sizzle](http://github.com/jeresig/sizzle) and [libxmljs](http://github.com/polotek/libxmljs) together. Currently it passes all relevant sizzle tests when used with an HTML document.
 
@@ -7,37 +7,36 @@ A [node.js](http://github.com/ry/node) plugin that brings [sizzle](http://github
 - libxmljs v0.4.0+
 
 ## How to install
-    npm install node-sizzle
+    npm install nquery
 
 ## How to test
-To run the tests, go to the project's root directory and run
-    node test.js
+    To run the tests, go to the project's root directory and run
+        node test.js
 
 ## Demo
-To run the demo, go to the `examples` directory and run
-    node web.js
+    To run the demo, go to the `examples` directory and run
+        node web.js
 
 ## How to use
-    var http     = require('http'),
-        events   = require('events'),
-        inherits = require('sys').inherits,
-        dominiq  = require('node-sizzle/dominiq'),
-        sizzFact = require('node-sizzle');
+    var http     = require('http');
+    var events   = require('events');
+    var inherits = require('sys').inherits;
+    var nquery   = require('nquery');
     
     function WebClient(host, path) {
         var self       = this,
             transport  = http.createClient(80, host),
             request    = transport.request('GET', path, {'host': host});
-            
+    
         request.end();
-        
+    
         request.on('response', function (response) {
             if (response.statusCode != 200) {
                 self.emit('done', response.statusCode, '');
             }
             else {
                 var html = '';
-            
+    
                 response.setEncoding('utf8');
                 response.on('data', function (chunk) {
                     html += chunk;
@@ -56,13 +55,14 @@ To run the demo, go to the `examples` directory and run
             throw 'unable to download page';
         }
     
-        var doc      = dominiq.createHTMLDocument(html),
-            window   = {document:doc},
-            sizzle   = sizzFact.sizzleInit(window),
-            divs     = sizzle('div');
+        var doc  = nquery.createHtmlDocument(html);
+        var divs = doc('div');
     
         for (var i = 0; i < divs.length; i++) {
             console.log(divs[i].toString());
         }
     });
+    
+    
+
     
