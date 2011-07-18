@@ -10,14 +10,16 @@ A [node.js](http://github.com/ry/node) plugin that brings [sizzle](http://github
     npm install nquery
 
 ## How to test
-    To run the tests, go to the project's root directory and run
-        node test.js
+To run the tests, go to the project's root directory and run
+    node test.js
 
 ## Demo
-    To run the demo, go to the `examples` directory and run
-        node web.js
+To run the demo, go to the `examples` directory and run
+    node web.js
 
 ## How to use
+
+``` javascript
     var http     = require('http');
     var events   = require('events');
     var inherits = require('sys').inherits;
@@ -62,6 +64,7 @@ A [node.js](http://github.com/ry/node) plugin that brings [sizzle](http://github
             console.log(divs[i].toString());
         }
     });
+``` javascript
     
     
 
