@@ -64,8 +64,4 @@ To run the demo, go to the `examples` directory and run
             console.log(divs[i].toString());
         }
     });
-``` javascript
-    
-    
-
-    
+```
