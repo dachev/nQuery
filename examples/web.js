@@ -2,7 +2,7 @@
 
 var http     = require('http');
 var events   = require('events');
-var inherits = require('sys').inherits;
+var inherits = require('util').inherits;
 var nquery   = require('../lib/nquery');
 
 function WebClient(host, path) {
