@@ -1,6 +1,6 @@
 var assert = require('assert'),
     fs = require('fs'),
-    sys = require('sys');
+    util = require('util');
 
 
 exports.testrunner = require('./testrunner');
@@ -45,8 +45,8 @@ var testEnv = function(start, options){
                 if(Object.getOwnPropertyDescriptor(e,'actual')
                 && Object.getOwnPropertyDescriptor(e,'expected')){
 
-                    var actual = sys.inspect(e.actual).replace(/\n$/,'');
-                    var expected = sys.inspect(e.expected).replace(/\n$/,'');
+                    var actual = util.inspect(e.actual).replace(/\n$/,'');
+                    var expected = util.inspect(e.expected).replace(/\n$/,'');
                     var multiline = (
                         actual.indexOf('\n') != -1 ||
                         expected.indexOf('\n') != -1
